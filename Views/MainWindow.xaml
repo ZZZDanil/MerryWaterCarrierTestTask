@@ -1,0 +1,36 @@
+﻿<Window x:Class="ВеселыйВодовоз.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ВеселыйВодовоз"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Rectangle Stroke="Black" Fill="#FF807D33" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="10*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Content="Department" Click="GoToDepartment" Grid.Row="1" VerticalAlignment="Center" Margin="15,0,15,0"/>
+                <Button Content="Employee" Click="GoToEmployee" Grid.Row="2" VerticalAlignment="Center" Margin="15,0,15,0"/>
+                <Button Content="Order" Click="GoToOrder" Grid.Row="3" VerticalAlignment="Center" Margin="15,0,15,0"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Frame x:Name="ListViewPage" Background="#FF8F4F4F" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>

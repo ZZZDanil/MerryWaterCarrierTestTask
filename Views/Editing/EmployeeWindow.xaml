@@ -1,0 +1,50 @@
+﻿<Window x:Class="ВеселыйВодовоз.Views.EmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ВеселыйВодовоз.Views"
+        mc:Ignorable="d"
+        Title="EmployeeWindow" Height="288.5" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Id" />
+        <TextBlock Text="Name"  Grid.Row="1" />
+        <TextBlock Text="Lastname" Grid.Row="2" />
+        <TextBlock Text="Middlename" Grid.Row="3" />
+        <TextBlock Text="Birthday" Grid.Row="4" />
+        <TextBlock Text="Sex" Grid.Row="5" />
+        <TextBlock Text="Department" Grid.Row="6" />
+
+        <TextBox Text="{Binding Id}" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding Name}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding Lastname}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding Middlename}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <DatePicker SelectedDate="{Binding Birthday}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <!--<TextBox Text="{Binding Birthday, StringFormat='{}{0:dd-MMM-yyyy hh:mm:ss}'}" 
+                   Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>-->
+
+        <TextBox Text="{Binding Sex}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding Department}" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
+            <Button IsDefault="True" Click="Accept_Click" >OK</Button>
+            <Button IsCancel="True" >Отмена</Button>
+        </StackPanel>
+    </Grid>
+</Window>
